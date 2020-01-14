@@ -11,8 +11,8 @@ void initialize(int n,vector<vector<double> > &A, vector<vector<double> > &B){
 		}
 	}
 }
-vector<vector<double> > naiveMulti(int n,vector<vector<double> > A, vector<vector<double> > B){
-	vector<vector<double> > C(n,vector<double> (n,0));
+void naiveMulti(int n,vector<vector<double> > A, vector<vector<double> > B, vector<vector<double> > &C){
+	// vector<vector<double> > C(n,vector<double> (n,0));
 	for(int i=0;i<n;i++){
 		for(int j=0;j<n;j++){
 			for(int k=0;k<n;k++){
@@ -20,10 +20,9 @@ vector<vector<double> > naiveMulti(int n,vector<vector<double> > A, vector<vecto
 			}
 		}
 	}
-	return C;
 }
-vector<vector<double> > opti1Multi(int n,vector<vector<double> > A, vector<vector<double> > B){
-	vector<vector<double> > C(n,vector<double> (n,0));
+void opti1Multi(int n,vector<vector<double> > A, vector<vector<double> > B, vector<vector<double> > &C){
+	// vector<vector<double> > C(n,vector<double> (n,0));
 	for(int i=0;i<n;i++){
 		for(int k=0;k<n;k++){
 			for(int j=0;j<n;j++){
@@ -31,10 +30,9 @@ vector<vector<double> > opti1Multi(int n,vector<vector<double> > A, vector<vecto
 			}
 		}
 	}
-	return C;
 }
-vector<vector<double> > opti2Multi(int n, int s, vector<vector<double> > A, vector<vector<double> > B){
-	vector<vector<double> > C(n,vector<double> (n,0));
+void opti2Multi(int n, int s, vector<vector<double> > A, vector<vector<double> > B, vector<vector<double> > &C){
+	// vector<vector<double> > C(n,vector<double> (n,0));
 	for(int i=0;i<n/s;i++){
 		for(int j=0;j<n/s;j++){
 			for(int k=0;k<n/s;k++){
@@ -48,20 +46,21 @@ vector<vector<double> > opti2Multi(int n, int s, vector<vector<double> > A, vect
 			}
 		}
 	}
-	return C;
 }
 void opti3Multi(int n,vector<vector<double> > &A, int A_l, int A_r, int A_u, int A_d, vector<vector<double> > &B, int B_l, int B_r, int B_u, int B_d, vector<vector<double> > &C, int C_l, int C_r, int C_u, int C_d){
-	int A_mid_x=(A_l+A_r+1)/2;
-	int A_mid_y=(A_u+A_d+1)/2;
-	int B_mid_x=(B_l+B_r+1)/2;
-	int B_mid_y=(B_u+B_d+1)/2;
-	int C_mid_x=(C_l+C_r+1)/2;
-	int C_mid_y=(C_u+C_d+1)/2;
-
+	int A_mid_x=(A_l+A_r)/2;
+	int A_mid_y=(A_u+A_d)/2;
+	int B_mid_x=(B_l+B_r)/2;
+	int B_mid_y=(B_u+B_d)/2;
+	int C_mid_x=(C_l+C_r)/2;
+	int C_mid_y=(C_u+C_d)/2;
+	// cout<<A_l<<" "<<A_r<<" "<<A_u<<" "<<A_d<<"\n";
+	// cout<<B_l<<" "<<B_r<<" "<<B_u<<" "<<B_d<<"\n";
+	// cout<<C_l<<" "<<C_r<<" "<<C_u<<" "<<C_d<<"\n";
 	if(A_l==A_r){
 		//base case
 		C[C_l][C_u]+=A[A_l][A_u]*B[B_l][B_u];
-		return;
+		return; 
 	}
 	opti3Multi(n, A, A_l, A_mid_x, A_u, A_mid_y, B, B_l, B_mid_x, B_u, B_mid_y, C, C_l, C_mid_x, C_u, C_mid_y);
 	opti3Multi(n, A, A_mid_x+1, A_r, A_u, A_mid_y, B, B_l, B_mid_x, B_mid_y, B_d, C, C_l, C_mid_x, C_u, C_mid_y);
@@ -83,37 +82,46 @@ void display(vector<vector<double> > C,int n){
 	}
 }
 int main(){
-	for(int n=2;n<=1024;n*=2){
+	for(int n=8;n<=8;n*=2){
 		cout<<"for size "<<n<<"\n";
 		vector<vector<double> > A(n,vector<double> (n,0));
 		vector<vector<double> > B(n,vector<double> (n,0));
 		initialize(n,A,B);
 		auto start = high_resolution_clock::now(); 
-		vector<vector<double> >C1 = naiveMulti(n,A,B);
-		auto stop = high_resolution_clock::now(); 
+		auto stop = high_resolution_clock::now();
 		auto duration = duration_cast<nanoseconds>(stop - start); 
+		
+		start = high_resolution_clock::now();
+		vector<vector<double> >C1(n,vector<double> (n,0));
+		naiveMulti(n,A,B,C1); 
+		stop = high_resolution_clock::now(); 
+		duration = duration_cast<nanoseconds>(stop - start); 
   		cout << "Time taken by function: "<< duration.count() << " nanoseconds" << endl; 
-  		// display(C1,n);
+  		display(C1,n);
+
     	start = high_resolution_clock::now(); 
-		vector<vector<double> >C2 = opti1Multi(n,A,B);
+		vector<vector<double> >C2(n,vector<double> (n,0)); 
+		opti1Multi(n,A,B,C2);
 		stop = high_resolution_clock::now(); 
 		duration = duration_cast<nanoseconds>(stop - start); 
     	cout << "Time taken by function: "<< duration.count() << " nanoseconds" << endl;
- 		// display(C2,n);
+ 		display(C2,n);
+
 		start = high_resolution_clock::now(); 
 		int s=64;//s is the size of block of matrix we are multiplying
-		vector<vector<double> >C3 = opti2Multi(n,min(s,n),A,B);
+		vector<vector<double> >C3(n,vector<double> (n,0));
+		opti2Multi(n,min(s,n),A,B,C3);
 		stop = high_resolution_clock::now(); 
 		duration = duration_cast<nanoseconds>(stop - start); 
     	cout << "Time taken by function: "<< duration.count() << " nanoseconds" << endl;
-    	// display(C3,n);
+    	display(C3,n);
     	start = high_resolution_clock::now(); 
 		vector<vector<double> >C4(n,vector<double> (n,0));
 		opti3Multi(n,A,0,n-1,0,n-1,B,0,n-1,0,n-1,C4,0,n-1,0,n-1);
 		stop = high_resolution_clock::now(); 
 		duration = duration_cast<nanoseconds>(stop - start); 
     	cout << "Time taken by function: "<< duration.count() << " nanoseconds" << endl;
-    		display(C4,n);
+    	display(C4,n);
 
 	}
 	return 0;
