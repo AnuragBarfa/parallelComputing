@@ -50,18 +50,29 @@ vector<vector<double> > opti2Multi(int n, int s, vector<vector<double> > A, vect
 	}
 	return C;
 }
-vector<vector<double> > opti3Multi(int n,vector<vector<double> > A, int B_l, int A_r, int A_h, int A_r, vector<vector<double> > B, int B_l, int B_r, int B_h, int B_r){
+void opti3Multi(int n,vector<vector<double> > &A, int A_l, int A_r, int A_u, int A_d, vector<vector<double> > &B, int B_l, int B_r, int B_u, int B_d, vector<vector<double> > &C, int C_l, int C_r, int C_u, int C_d){
 	int A_mid_x=(A_l+A_r+1)/2;
-	int A_mid_y=(A_h+A_l+1)/2;
-	vector<vector<double> > C(n,vector<double> (n,0));
-	for(int i=0;i<n;i++){
-		for(int k=0;k<n;k++){
-			for(int j=0;j<n;j++){
-				C[i][j]+=A[i][k]*B[k][j];
-			}
-		}
+	int A_mid_y=(A_u+A_d+1)/2;
+	int B_mid_x=(B_l+B_r+1)/2;
+	int B_mid_y=(B_u+B_d+1)/2;
+	int C_mid_x=(C_l+C_r+1)/2;
+	int C_mid_y=(C_u+C_d+1)/2;
+
+	if(A_l==A_r){
+		//base case
+		C[C_l][C_u]+=A[A_l][A_u]*B[B_l][B_u];
+		return;
 	}
-	return C;
+	opti3Multi(n, A, A_l, A_mid_x, A_u, A_mid_y, B, B_l, B_mid_x, B_u, B_mid_y, C, C_l, C_mid_x, C_u, C_mid_y);
+	opti3Multi(n, A, A_mid_x+1, A_r, A_u, A_mid_y, B, B_l, B_mid_x, B_mid_y, B_d, C, C_l, C_mid_x, C_u, C_mid_y);
+	opti3Multi(n, A, A_l, A_mid_x, A_u, A_mid_y, B, B_mid_x+1, B_r, B_u, B_mid_y, C, C_mid_x+1, C_r, C_u, C_mid_y);
+	opti3Multi(n, A, A_mid_x+1, A_r, A_u, A_mid_y, B, B_mid_x+1, B_r, B_mid_y, B_d, C, C_mid_x+1, C_r, C_u, C_mid_y);
+
+	opti3Multi(n, A, A_l, A_mid_x, A_mid_y+1, A_d, B, B_l, B_mid_x, B_u, B_mid_y, C, C_l, C_mid_x, C_mid_y+1, C_d);
+	opti3Multi(n, A, A_mid_x+1, A_r, A_mid_y+1, A_d, B, B_l, B_mid_x, B_mid_y, B_d, C, C_l, C_mid_x, C_mid_y+1, C_d);
+	opti3Multi(n, A, A_l, A_mid_x, A_mid_y+1, A_d, B, B_mid_x+1, B_r, B_u, B_mid_y, C, C_mid_x+1, C_r, C_mid_y+1, C_d);
+	opti3Multi(n, A, A_mid_x+1, A_r, A_mid_y+1, A_d, B, B_mid_x+1, B_r, B_mid_y, B_d, C, C_mid_x+1, C_r, C_mid_y+1, C_d);
+		
 }
 void display(vector<vector<double> > C,int n){
 	for(int i=0;i<n;i++){
@@ -97,12 +108,12 @@ int main(){
     	cout << "Time taken by function: "<< duration.count() << " nanoseconds" << endl;
     	// display(C3,n);
     	start = high_resolution_clock::now(); 
-		int s=64;//s is the size of block of matrix we are multiplying
-		vector<vector<double> >C4 = opti3Multi(n,A,0,n-1,0,n-1,B,0,n-1,0,n-1);
+		vector<vector<double> >C4(n,vector<double> (n,0));
+		opti3Multi(n,A,0,n-1,0,n-1,B,0,n-1,0,n-1,C4,0,n-1,0,n-1);
 		stop = high_resolution_clock::now(); 
 		duration = duration_cast<nanoseconds>(stop - start); 
     	cout << "Time taken by function: "<< duration.count() << " nanoseconds" << endl;
-    	display(C4,n);
+    		display(C4,n);
 
 	}
 	return 0;
