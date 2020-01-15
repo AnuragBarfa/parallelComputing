@@ -6,8 +6,8 @@ void initialize(int n,vector<vector<double> > &A, vector<vector<double> > &B){
 	for(int i=0;i<n;i++){
 		//vector<double> temp(n);
 		for(int j=0;j<n;j++){
-			A[i][j]=rand()%50;
-			B[i][j]=rand()%50;
+			A[i][j]=rand()%10;
+			B[i][j]=rand()%10;
 		}
 	}
 }
@@ -54,26 +54,29 @@ void opti3Multi(int n,vector<vector<double> > &A, int A_l, int A_r, int A_u, int
 	int B_mid_y=(B_u+B_d)/2;
 	int C_mid_x=(C_l+C_r)/2;
 	int C_mid_y=(C_u+C_d)/2;
+	// cout<<"in rec\n";
 	// cout<<A_l<<" "<<A_r<<" "<<A_u<<" "<<A_d<<"\n";
 	// cout<<B_l<<" "<<B_r<<" "<<B_u<<" "<<B_d<<"\n";
 	// cout<<C_l<<" "<<C_r<<" "<<C_u<<" "<<C_d<<"\n";
 	if(A_l==A_r){
 		//base case
-		C[C_l][C_u]+=A[A_l][A_u]*B[B_l][B_u];
+		C[C_u][C_l]+=A[A_u][A_l]*B[B_u][B_l];
+		// cout<<C_l<<" "<<C_u<<" "<<A[A_l][A_u]<<" "<<B[B_l][B_u]<<"\n";
 		return; 
 	}
 	opti3Multi(n, A, A_l, A_mid_x, A_u, A_mid_y, B, B_l, B_mid_x, B_u, B_mid_y, C, C_l, C_mid_x, C_u, C_mid_y);
-	opti3Multi(n, A, A_mid_x+1, A_r, A_u, A_mid_y, B, B_l, B_mid_x, B_mid_y, B_d, C, C_l, C_mid_x, C_u, C_mid_y);
+	opti3Multi(n, A, A_mid_x+1, A_r, A_u, A_mid_y, B, B_l, B_mid_x, B_mid_y+1, B_d, C, C_l, C_mid_x, C_u, C_mid_y);
 	opti3Multi(n, A, A_l, A_mid_x, A_u, A_mid_y, B, B_mid_x+1, B_r, B_u, B_mid_y, C, C_mid_x+1, C_r, C_u, C_mid_y);
-	opti3Multi(n, A, A_mid_x+1, A_r, A_u, A_mid_y, B, B_mid_x+1, B_r, B_mid_y, B_d, C, C_mid_x+1, C_r, C_u, C_mid_y);
+	opti3Multi(n, A, A_mid_x+1, A_r, A_u, A_mid_y, B, B_mid_x+1, B_r, B_mid_y+1, B_d, C, C_mid_x+1, C_r, C_u, C_mid_y);
 
 	opti3Multi(n, A, A_l, A_mid_x, A_mid_y+1, A_d, B, B_l, B_mid_x, B_u, B_mid_y, C, C_l, C_mid_x, C_mid_y+1, C_d);
-	opti3Multi(n, A, A_mid_x+1, A_r, A_mid_y+1, A_d, B, B_l, B_mid_x, B_mid_y, B_d, C, C_l, C_mid_x, C_mid_y+1, C_d);
+	opti3Multi(n, A, A_mid_x+1, A_r, A_mid_y+1, A_d, B, B_l, B_mid_x, B_mid_y+1, B_d, C, C_l, C_mid_x, C_mid_y+1, C_d);
 	opti3Multi(n, A, A_l, A_mid_x, A_mid_y+1, A_d, B, B_mid_x+1, B_r, B_u, B_mid_y, C, C_mid_x+1, C_r, C_mid_y+1, C_d);
-	opti3Multi(n, A, A_mid_x+1, A_r, A_mid_y+1, A_d, B, B_mid_x+1, B_r, B_mid_y, B_d, C, C_mid_x+1, C_r, C_mid_y+1, C_d);
+	opti3Multi(n, A, A_mid_x+1, A_r, A_mid_y+1, A_d, B, B_mid_x+1, B_r, B_mid_y+1, B_d, C, C_mid_x+1, C_r, C_mid_y+1, C_d);
 		
 }
 void display(vector<vector<double> > C,int n){
+	cout<<"priting matrix\n";
 	for(int i=0;i<n;i++){
 		for(int j=0;j<n;j++){
 			cout<<C[i][j]<<" ";
@@ -82,11 +85,13 @@ void display(vector<vector<double> > C,int n){
 	}
 }
 int main(){
-	for(int n=8;n<=8;n*=2){
+	for(int n=2;n<=1024;n*=2){
 		cout<<"for size "<<n<<"\n";
 		vector<vector<double> > A(n,vector<double> (n,0));
 		vector<vector<double> > B(n,vector<double> (n,0));
 		initialize(n,A,B);
+		// display(A,n);
+		// display(B,n);
 		auto start = high_resolution_clock::now(); 
 		auto stop = high_resolution_clock::now();
 		auto duration = duration_cast<nanoseconds>(stop - start); 
@@ -97,7 +102,7 @@ int main(){
 		stop = high_resolution_clock::now(); 
 		duration = duration_cast<nanoseconds>(stop - start); 
   		cout << "Time taken by function: "<< duration.count() << " nanoseconds" << endl; 
-  		display(C1,n);
+  		// display(C1,n);
 
     	start = high_resolution_clock::now(); 
 		vector<vector<double> >C2(n,vector<double> (n,0)); 
@@ -105,7 +110,7 @@ int main(){
 		stop = high_resolution_clock::now(); 
 		duration = duration_cast<nanoseconds>(stop - start); 
     	cout << "Time taken by function: "<< duration.count() << " nanoseconds" << endl;
- 		display(C2,n);
+ 		// display(C2,n);
 
 		start = high_resolution_clock::now(); 
 		int s=64;//s is the size of block of matrix we are multiplying
@@ -114,14 +119,14 @@ int main(){
 		stop = high_resolution_clock::now(); 
 		duration = duration_cast<nanoseconds>(stop - start); 
     	cout << "Time taken by function: "<< duration.count() << " nanoseconds" << endl;
-    	display(C3,n);
+    	// display(C3,n);
     	start = high_resolution_clock::now(); 
 		vector<vector<double> >C4(n,vector<double> (n,0));
 		opti3Multi(n,A,0,n-1,0,n-1,B,0,n-1,0,n-1,C4,0,n-1,0,n-1);
 		stop = high_resolution_clock::now(); 
 		duration = duration_cast<nanoseconds>(stop - start); 
     	cout << "Time taken by function: "<< duration.count() << " nanoseconds" << endl;
-    	display(C4,n);
+    	// display(C4,n);
 
 	}
 	return 0;
