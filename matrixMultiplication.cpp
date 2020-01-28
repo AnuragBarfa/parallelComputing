@@ -11,7 +11,7 @@ void initialize(int n,vector<vector<double> > &A, vector<vector<double> > &B){
 		}
 	}
 }
-void naiveMulti(int n,vector<vector<double> > A, vector<vector<double> > B, vector<vector<double> > &C){
+void naiveMulti(int n,vector<vector<double> > &A, vector<vector<double> > &B, vector<vector<double> > &C){
 	// vector<vector<double> > C(n,vector<double> (n,0));
 	for(int i=0;i<n;i++){
 		for(int j=0;j<n;j++){
@@ -21,7 +21,7 @@ void naiveMulti(int n,vector<vector<double> > A, vector<vector<double> > B, vect
 		}
 	}
 }
-void opti1Multi(int n,vector<vector<double> > A, vector<vector<double> > B, vector<vector<double> > &C){
+void opti1Multi(int n,vector<vector<double> > &A, vector<vector<double> > &B, vector<vector<double> > &C){
 	// vector<vector<double> > C(n,vector<double> (n,0));
 	for(int i=0;i<n;i++){
 		for(int k=0;k<n;k++){
@@ -31,7 +31,7 @@ void opti1Multi(int n,vector<vector<double> > A, vector<vector<double> > B, vect
 		}
 	}
 }
-void opti2Multi(int n, int s, vector<vector<double> > A, vector<vector<double> > B, vector<vector<double> > &C){
+void opti2Multi(int n, int s, vector<vector<double> > &A, vector<vector<double> > &B, vector<vector<double> > &C){
 	// vector<vector<double> > C(n,vector<double> (n,0));
 	for(int i=0;i<n/s;i++){
 		for(int j=0;j<n/s;j++){
@@ -85,7 +85,7 @@ void display(vector<vector<double> > C,int n){
 	}
 }
 int main(){
-	for(int n=2;n<=1024;n*=2){
+	for(int n=2;n<=2048;n*=2){
 		cout<<"for size "<<n<<"\n";
 		vector<vector<double> > A(n,vector<double> (n,0));
 		vector<vector<double> > B(n,vector<double> (n,0));
