@@ -1,0 +1,30 @@
+for size 64
+Time taken by function: 11043303 nanoseconds
+Time taken by function: 8592610 nanoseconds
+Time taken by function: 7958888 nanoseconds
+Time taken by function: 12175709 nanoseconds
+for size 128
+Time taken by function: 56631862 nanoseconds
+Time taken by function: 54471413 nanoseconds
+Time taken by function: 55279408 nanoseconds
+Time taken by function: 97679621 nanoseconds
+for size 256
+Time taken by function: 442086301 nanoseconds
+Time taken by function: 428710784 nanoseconds
+Time taken by function: 437545624 nanoseconds
+Time taken by function: 770819052 nanoseconds
+for size 512
+Time taken by function: 4234555400 nanoseconds
+Time taken by function: 3458745593 nanoseconds
+Time taken by function: 3601481539 nanoseconds
+Time taken by function: 6170624563 nanoseconds
+for size 1024
+Time taken by function: 36564933147 nanoseconds
+Time taken by function: 27364002179 nanoseconds
+Time taken by function: 28594288334 nanoseconds
+Time taken by function: 49246513090 nanoseconds
+for size 2048
+Time taken by function: 347704647835 nanoseconds
+Time taken by function: 220173575539 nanoseconds
+Time taken by function: 236656501297 nanoseconds
+Time taken by function: 394419904443 nanoseconds

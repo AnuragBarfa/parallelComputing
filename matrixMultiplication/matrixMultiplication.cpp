@@ -85,7 +85,7 @@ void display(vector<vector<double> > C,int n){
 	}
 }
 int main(){
-	for(int n=2;n<=2048;n*=2){
+	for(int n=4096;n<=4096;n*=2){
 		cout<<"for size "<<n<<"\n";
 		vector<vector<double> > A(n,vector<double> (n,0));
 		vector<vector<double> > B(n,vector<double> (n,0));
