@@ -5,7 +5,6 @@ using namespace std;
 int main(int argc, char** argv) {
     // Initialize the MPI environment
     MPI_Init(NULL, NULL);
-
     int world_rank;
     MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
     int world_size;
@@ -13,7 +12,8 @@ int main(int argc, char** argv) {
 
     
     if (world_rank == 0) {
-        int n=10000;
+        int n=stoi(argv[1]);
+        printf("Array size: %d\n", n);
         int p=world_size;
         int number[n]={0};
         for(int i=0;i<n;i++)number[i]=rand()%100;
@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
             arraySum+=partialSum;    
         }
         double toc=MPI_Wtime(); 
-        printf("Sum of array: %d\n", arraySum);
+        // printf("Sum of array: %d\n", arraySum);
         // cout<<toc-tic<<"\n";
         printf("Time required for computation(sec) : %e\n", toc-tic);
     } 

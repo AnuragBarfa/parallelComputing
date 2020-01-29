@@ -32,7 +32,7 @@ for j in range(0,len(allFiles)):
 	axs[j//2,j%2].plot(n,t3)	
 # give x and y label to all subplots
 for ax in axs.flat:
-    ax.set(xlabel='matrix size', ylabel='computation time(ns)')
+    ax.set(xlabel='Matrix size (n)', ylabel='Computation time(ns)')
 
 # reomve all inner x and y label only boundary label remains
 for ax in axs.flat:
