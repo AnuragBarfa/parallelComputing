@@ -1,18 +1,3 @@
-// MPI_Send(
-//     void* data,
-//     int count,
-//     MPI_Datatype datatype,
-//     int destination,
-//     int tag,
-//     MPI_Comm communicator)
-// MPI_Recv(
-//     void* data,
-//     int count,
-//     MPI_Datatype datatype,
-//     int source,
-//     int tag,
-//     MPI_Comm communicator,
-//     MPI_Status* status)
 #include <mpi.h>
 #include <stdio.h>
 
@@ -24,24 +9,25 @@ int main(int argc, char** argv) {
     MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
     int world_size;
     MPI_Comm_size(MPI_COMM_WORLD, &world_size);
-
-    if (world_rank == 0) {
-        int number;
-        number = 3;
-        MPI_Send(&number, 1, MPI_INT, 1, 0, MPI_COMM_WORLD);
-        MPI_Recv(&number, 1, MPI_INT, 1, 0, MPI_COMM_WORLD,
+    int n=20000;
+    int number1[n]={0};
+    int number2[n]={0};
+    for(int i=0;i<n;i++){
+        number1[i]=rand()%10;
+        number2[i]=rand()%10;
+    }
+    if (world_rank == 0) {  
+        MPI_Send(&number1, n, MPI_INT, 1, 0, MPI_COMM_WORLD);
+        MPI_Recv(&number1, n, MPI_INT, 1, 0, MPI_COMM_WORLD,
                  MPI_STATUS_IGNORE);
         printf("Process 0 received number %d from process 1\n",
-               number);
+               number1[0]);
     } else if (world_rank == 1) {
-        int number;
-        MPI_Recv(&number, 1, MPI_INT, 0, 0, MPI_COMM_WORLD,
+        MPI_Send(&number2, n, MPI_INT, 0, 0, MPI_COMM_WORLD);
+        MPI_Recv(&number2, n, MPI_INT, 0, 0, MPI_COMM_WORLD,
                  MPI_STATUS_IGNORE);
         printf("Process 1 received number %d from process 0\n",
-               number);
-        number=4;
-        MPI_Send(&number, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
-        
+               number2[0]);        
     }
 
     // Finalize the MPI environment.
