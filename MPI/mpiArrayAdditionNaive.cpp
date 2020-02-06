@@ -4,6 +4,7 @@
 using namespace std;
 int main(int argc, char** argv) {
     // Initialize the MPI environment
+    freopen("naiveOutput.txt","a",stdout);
     MPI_Init(NULL, NULL);
     int world_rank;
     MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
@@ -46,7 +47,7 @@ int main(int argc, char** argv) {
         double toc=MPI_Wtime(); 
         // printf("Sum of array: %d\n", arraySum);
         // cout<<toc-tic<<"\n";
-        printf("Time required for computation(sec) : %e\n", toc-tic);
+        printf("Time required for computation(sec): %e\n", toc-tic);
     } 
     else{
         int arraySizeToRecieve;
