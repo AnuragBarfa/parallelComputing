@@ -12,8 +12,8 @@ int main(int argc, char** argv) {
     MPI_Comm_size(MPI_COMM_WORLD, &world_size);
     int p=world_size;
     int *number;
-    int n=64;//initially it should have been with P0 only and then distributed but for modified the idea  
-    // int n=stoi(argv[1]);
+    // int n=64;//initially it should have been with P0 only and then distributed but for modified the idea  
+    int n=stoi(argv[1]);
     int start=-1;
     int end=-1;
     int arraySize=-1;
@@ -22,9 +22,9 @@ int main(int argc, char** argv) {
         printf("Array size: %d\n", n);
         number=new int[n];
         for(int i=0;i<n;i++)number[i]=rand()%100;
-        // int check=0;
-        // for(int i=0;i<n;i++)check+=number[i];
-        // printf("%d\n", check);
+        int check=0;
+        for(int i=0;i<n;i++)check+=number[i];
+        printf("%d\n", check);
         start=0;
         end=p-1;
         arraySize=n;
@@ -59,18 +59,28 @@ int main(int argc, char** argv) {
     // printf("number with process %d :\n", world_rank);
     // for(int i=0;i<arraySize;i++)printf("%d ", number[i]);
     // printf("\n");
+    double tic=MPI_Wtime(); 
     int partialSum=0;
     for(int i=0;i<arraySize;i++)partialSum+=number[i];
-    while(){
-        MPI_Recv();
+    while(tempEnd!=end){
+        int tempSum=0;
+        tempEnd=start+2*(tempEnd-start)+1;
+        int source=(tempEnd+start+1)/2;
+        MPI_Recv(&tempSum, 1, MPI_INT, source, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        partialSum+=tempSum;
     }
+    double toc=MPI_Wtime(); 
     if(world_rank!=0){
         MPI_Send(&partialSum, 1, MPI_INT, parentID, 0, MPI_COMM_WORLD);        
     }    
-    double toc=MPI_Wtime(); 
-// printf("Sum of array: %d\n", arraySum);
+    else{
+        printf("Sum of array: %d\n", partialSum);
+        printf("Time required for computation(sec): %e\n", toc-tic);
+    }
+    
+    
 // cout<<toc-tic<<"\n";
-// printf("Time required for computation(sec): %e\n", toc-tic);
+    
     // Finalize the MPI environment.
     MPI_Finalize();
 }
