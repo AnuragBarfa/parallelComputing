@@ -20,48 +20,54 @@ int main(int argc, char** argv) {
     int parentID =-1;
     if (world_rank == 0) {
         printf("Array size: %d\n", n);
+        
+        //initializing data with process P0
         number=new int[n];
         for(int i=0;i<n;i++)number[i]=rand()%100;
-        int check=0;
-        for(int i=0;i<n;i++)check+=number[i];
-        printf("%d\n", check);
+        // int check=0;
+        // for(int i=0;i<n;i++)check+=number[i];
+        // printf("%d\n", check);
         start=0;
         end=p-1;
         arraySize=n;
     } 
     else{
-        // printf("recieving start %d\n", world_rank);
         MPI_Status status;
+        //Receving bound for which thic process is highest parent 
         MPI_Recv(&start, 1, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status);
         parentID=status.MPI_SOURCE;
         MPI_Recv(&end, 1, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        
+        //Receving size of array to receive and array also
         MPI_Recv(&arraySize, 1, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-        // printf("recieved by %d %d %d\n",world_rank,start,end);
-        // printf("recieving done %d\n", world_rank);
         number=new int[arraySize];
         MPI_Recv(number, arraySize, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
         
-        // MPI_Send(number+destination, destination-start, MPI_INT, destination, 1, MPI_COMM_WORLD);    
     }
+    //after process having respecting data it come to this point and start distributing based on bound 
     int tempEnd=end;
     while(tempEnd>start){
         int destination=(tempEnd+start+1)/2;
         int arraySizeToSend=arraySize/2;
-        // printf("sending start %d to %d\n", world_rank,destination);
+
+        //Receving bound for which destination process is highest parent 
         MPI_Send(&destination, 1, MPI_INT, destination, 0, MPI_COMM_WORLD);    
         MPI_Send(&tempEnd, 1, MPI_INT, destination, 0, MPI_COMM_WORLD);    
+        
+        //Sending size of array to receive by destination process and array also
         MPI_Send(&arraySizeToSend, 1, MPI_INT, destination, 0, MPI_COMM_WORLD);
         MPI_Send(number+arraySize/2, arraySizeToSend, MPI_INT, destination, 0, MPI_COMM_WORLD);
         tempEnd=destination-1;
-        arraySize/=2;
-        // printf("sending done %d to %d\n", world_rank,destination);
+        arraySize/=2;//updating size of uvailable array after every round of distribution 
     }
-    // printf("number with process %d :\n", world_rank);
-    // for(int i=0;i<arraySize;i++)printf("%d ", number[i]);
-    // printf("\n");
+
     double tic=MPI_Wtime(); 
+    
+    // after  completion of distribution each processor adds available number with it
     int partialSum=0;
     for(int i=0;i<arraySize;i++)partialSum+=number[i];
+
+    //recursivly gather all the partial sum values from the destination process where it has previously given data
     while(tempEnd!=end){
         int tempSum=0;
         tempEnd=start+2*(tempEnd-start)+1;
