@@ -2,23 +2,40 @@ import os
 import csv
 from docx import Document
 from docx.shared import Inches
+import matplotlib.pyplot as plt
 
-files=['naiveOutput.txt']
+files=['naiveOutput.txt','recursiveOutput.txt','reduceOutput.txt']
 data=[]
 for file in files:
 	with open(file,'r') as csvfile:
 		cursor = csv.reader(csvfile, delimiter=' ')
+		temp_data=[]
 		for row in cursor:
-			data.append(row)
+			temp_data.append(row)
+		data.append(temp_data)	
 cleanedData=[[] for _ in range(len(files)+1) ]
 print(cleanedData)
-i=0
-while i<len(data):
-	cleanedData[0].append(float(data[i][2]))
-	cleanedData[1].append(float(data[i+1][4]))
-	i=i+2
-print(data)
+for fileIndex in range(0,len(data)):
+	rowIndex=0
+	while rowIndex<len(data[fileIndex]):
+		if fileIndex==0:
+			cleanedData[0].append(float(data[fileIndex][rowIndex][2]))
+		cleanedData[fileIndex+1].append(float(data[fileIndex][rowIndex+1][4]))
+		rowIndex=rowIndex+2
 print(cleanedData)
+plt.figure()
+plt.xlabel('Matrix size (n)')
+plt.ylabel('Computation time(ns)')
+plt.title('Graph showing variation of time for addition as size changes')
+plt.plot(cleanedData[0],cleanedData[1],label='naive')
+plt.plot(cleanedData[0],cleanedData[2],label='using recursion')
+plt.plot(cleanedData[0],cleanedData[3],label='using reduce')
+# plt.plot(n,t1,label='optimization1')
+# plt.plot(n,t2,label='optimization2')
+# plt.plot(n,t3,label='optimization3')
+plt.legend(loc='upper left')
+plt.savefig('comparisionGraph.png')
+# plt.show()
 try:
 	os.remove('report.docx')
 except OSError:
@@ -32,12 +49,6 @@ p = document.add_paragraph('')
 p.add_run('Roll No. - ').bold = True
 p.add_run(' 160123005 ')
 
-# records = (
-#     (3, '101', 'Spam'),
-#     (7, '422', 'Eggs'),
-#     (4, '631', 'Spam, spam, eggs, and spam')
-# )
-
 table = document.add_table(rows=1, cols=len(files)+1)
 
 hdr_cells = table.rows[0].cells
@@ -45,12 +56,13 @@ hdr_cells[0].text = 'Size(n)'
 for i in range(0,len(files)):
 	hdr_cells[i+1].text=files[i].split(".")[0]
 
-for qty, id, desc in records:
+for i in range(0,len(cleanedData[0])):
     row_cells = table.add_row().cells
-    row_cells[0].text = str(qty)
-    row_cells[1].text = id
-    # row_cells[2].text = desc
-
+    row_cells[0].text = str(cleanedData[0][i])
+    for j in range(0,len(files)):
+    	row_cells[j+1].text=str(cleanedData[j+1][i])
+r=p.add_run()
+r.add_picture('comparisionGraph.png')
 document.add_page_break()
 
 document.save('report.docx')			

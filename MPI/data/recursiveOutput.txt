@@ -1,0 +1,16 @@
+Array size: 8
+Time required for computation(sec): 9.848698e-05
+Array size: 16
+Time required for computation(sec): 5.912202e-05
+Array size: 32
+Time required for computation(sec): 7.494501e-05
+Array size: 64
+Time required for computation(sec): 7.121501e-05
+Array size: 128
+Time required for computation(sec): 1.316020e-04
+Array size: 256
+Time required for computation(sec): 9.346000e-05
+Array size: 512
+Time required for computation(sec): 1.057840e-04
+Array size: 1024
+Time required for computation(sec): 1.521940e-04

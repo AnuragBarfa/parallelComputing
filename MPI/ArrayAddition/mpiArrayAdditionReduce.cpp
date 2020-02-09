@@ -4,7 +4,7 @@
 using namespace std;
 int main(int argc, char** argv) {
     // Initialize the MPI environment
-    // freopen("reduceOutput.txt","a",stdout);
+    freopen("reduceOutput.txt","a",stdout);
     MPI_Init(NULL, NULL);
     int world_rank;
     MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);

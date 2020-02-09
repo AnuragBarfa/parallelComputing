@@ -36,6 +36,7 @@ int main(int argc, char** argv) {
     if(world_rank==0){
         partialAverages= new float[world_size];
     }
+    //data is gathered in order of the rank of processes 
     MPI_Gather(&partialAverage, 1, MPI_FLOAT, partialAverages, 1, MPI_FLOAT, 0, MPI_COMM_WORLD);
     if(world_rank==0){
         float ans=0;

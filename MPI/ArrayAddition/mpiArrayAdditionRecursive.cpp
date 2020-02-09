@@ -4,7 +4,7 @@
 using namespace std;
 int main(int argc, char** argv) {
     // Initialize the MPI environment
-    // freopen("recursiveOutput.txt","a",stdout);
+    freopen("recursiveOutput.txt","a",stdout);
     MPI_Init(NULL, NULL);
     int world_rank;
     MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
@@ -80,7 +80,7 @@ int main(int argc, char** argv) {
         MPI_Send(&partialSum, 1, MPI_INT, parentID, 0, MPI_COMM_WORLD);        
     }    
     else{
-        printf("Sum of array: %d\n", partialSum);
+        // printf("Sum of array: %d\n", partialSum);
         printf("Time required for computation(sec): %e\n", toc-tic);
     }
     
