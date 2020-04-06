@@ -1,0 +1,168 @@
+parameters used n = 128
+parameters used thread_count = 128
+Time taken by parallel implementation : 5928491 nanoseconds
+Time taken by serial implementation : 1327 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41189.205902
+Answer found by simple implementation : 41189.205902
+parameters used n = 256
+parameters used thread_count = 128
+Time taken by parallel implementation : 3130844 nanoseconds
+Time taken by serial implementation : 2736 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41427.470421
+Answer found by simple implementation : 41427.470421
+parameters used n = 512
+parameters used thread_count = 128
+Time taken by parallel implementation : 8152718 nanoseconds
+Time taken by serial implementation : 5158 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41546.827078
+Answer found by simple implementation : 41546.827078
+parameters used n = 1024
+parameters used thread_count = 128
+Time taken by parallel implementation : 3746625 nanoseconds
+Time taken by serial implementation : 10422 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41606.561506
+Answer found by simple implementation : 41606.561506
+parameters used n = 2048
+parameters used thread_count = 128
+Time taken by parallel implementation : 3460950 nanoseconds
+Time taken by serial implementation : 15524 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41636.442745
+Answer found by simple implementation : 41636.442745
+parameters used n = 4096
+parameters used thread_count = 128
+Time taken by parallel implementation : 4311194 nanoseconds
+Time taken by serial implementation : 45583 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41651.386870
+Answer found by simple implementation : 41651.386870
+parameters used n = 8192
+parameters used thread_count = 128
+Time taken by parallel implementation : 4503726 nanoseconds
+Time taken by serial implementation : 71242 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41658.859810
+Answer found by simple implementation : 41658.859810
+parameters used n = 16384
+parameters used thread_count = 128
+Time taken by parallel implementation : 3354300 nanoseconds
+Time taken by serial implementation : 246026 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41662.596498
+Answer found by simple implementation : 41662.596498
+parameters used n = 32768
+parameters used thread_count = 128
+Time taken by parallel implementation : 4792160 nanoseconds
+Time taken by serial implementation : 322597 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41664.464898
+Answer found by simple implementation : 41664.464898
+parameters used n = 65536
+parameters used thread_count = 128
+Time taken by parallel implementation : 3832010 nanoseconds
+Time taken by serial implementation : 505790 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41665.399111
+Answer found by simple implementation : 41665.399111
+parameters used n = 131072
+parameters used thread_count = 128
+Time taken by parallel implementation : 3730869 nanoseconds
+Time taken by serial implementation : 1098911 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41665.866221
+Answer found by simple implementation : 41665.866221
+parameters used n = 262144
+parameters used thread_count = 128
+Time taken by parallel implementation : 5155902 nanoseconds
+Time taken by serial implementation : 2080970 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41666.099777
+Answer found by simple implementation : 41666.099777
+parameters used n = 524288
+parameters used thread_count = 128
+Time taken by parallel implementation : 4881111 nanoseconds
+Time taken by serial implementation : 3568223 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41666.216555
+Answer found by simple implementation : 41666.216555
+parameters used n = 1048576
+parameters used thread_count = 128
+Time taken by parallel implementation : 8053523 nanoseconds
+Time taken by serial implementation : 7534537 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41666.274944
+Answer found by simple implementation : 41666.274944
+parameters used n = 2097152
+parameters used thread_count = 128
+Time taken by parallel implementation : 10376178 nanoseconds
+Time taken by serial implementation : 16376838 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41666.304139
+Answer found by simple implementation : 41666.304139
+parameters used n = 4194304
+parameters used thread_count = 128
+Time taken by parallel implementation : 18330544 nanoseconds
+Time taken by serial implementation : 30513231 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41666.318736
+Answer found by simple implementation : 41666.318736
+parameters used n = 8388608
+parameters used thread_count = 128
+Time taken by parallel implementation : 30999208 nanoseconds
+Time taken by serial implementation : 57720248 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41666.326035
+Answer found by simple implementation : 41666.326035
+parameters used n = 16777216
+parameters used thread_count = 128
+Time taken by parallel implementation : 57140106 nanoseconds
+Time taken by serial implementation : 113676134 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41666.329684
+Answer found by simple implementation : 41666.329684
+parameters used n = 33554432
+parameters used thread_count = 128
+Time taken by parallel implementation : 112757385 nanoseconds
+Time taken by serial implementation : 226758050 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41666.331509
+Answer found by simple implementation : 41666.331509
+parameters used n = 67108864
+parameters used thread_count = 128
+Time taken by parallel implementation : 219711253 nanoseconds
+Time taken by serial implementation : 451363486 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41666.332421
+Answer found by simple implementation : 41666.332421
+parameters used n = 134217728
+parameters used thread_count = 128
+Time taken by parallel implementation : 436464905 nanoseconds
+Time taken by serial implementation : 893441676 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41666.332877
+Answer found by simple implementation : 41666.332877
+parameters used n = 268435456
+parameters used thread_count = 128
+Time taken by parallel implementation : 869126378 nanoseconds
+Time taken by serial implementation : 1788805891 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41666.333105
+Answer found by simple implementation : 41666.333105
+parameters used n = 536870912
+parameters used thread_count = 128
+Time taken by parallel implementation : 1734740085 nanoseconds
+Time taken by serial implementation : 3599916407 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41666.333219
+Answer found by simple implementation : 41666.333219
+parameters used n = 1073741824
+parameters used thread_count = 128
+Time taken by parallel implementation : 3459083032 nanoseconds
+Time taken by serial implementation : 7130209793 nanoseconds
+Actual Answer : 41666.333333
+Answer found by parallel implementation : 41666.333276
+Answer found by simple implementation : 41666.333276

@@ -1,0 +1,288 @@
+parameters used n = 32768
+parameters used thread_count = 2
+Time taken by parallel implementation : 323832 nanoseconds
+Time taken by serial implementation : 610727 nanoseconds
+parameters used n = 32768
+parameters used thread_count = 4
+Time taken by parallel implementation : 9242257 nanoseconds
+Time taken by serial implementation : 339306 nanoseconds
+parameters used n = 32768
+parameters used thread_count = 8
+Time taken by parallel implementation : 491303 nanoseconds
+Time taken by serial implementation : 220792 nanoseconds
+parameters used n = 32768
+parameters used thread_count = 16
+Time taken by parallel implementation : 3333757 nanoseconds
+Time taken by serial implementation : 236703 nanoseconds
+parameters used n = 32768
+parameters used thread_count = 32
+Time taken by parallel implementation : 1704332 nanoseconds
+Time taken by serial implementation : 349317 nanoseconds
+parameters used n = 32768
+parameters used thread_count = 64
+Time taken by parallel implementation : 2249667 nanoseconds
+Time taken by serial implementation : 279744 nanoseconds
+parameters used n = 32768
+parameters used thread_count = 128
+Time taken by parallel implementation : 4021938 nanoseconds
+Time taken by serial implementation : 217161 nanoseconds
+parameters used n = 32768
+parameters used thread_count = 256
+Time taken by parallel implementation : 10731510 nanoseconds
+Time taken by serial implementation : 221652 nanoseconds
+parameters used n = 32768
+parameters used thread_count = 512
+Time taken by parallel implementation : 17155356 nanoseconds
+Time taken by serial implementation : 260987 nanoseconds
+parameters used n = 32768
+parameters used thread_count = 1024
+Time taken by parallel implementation : 28149255 nanoseconds
+Time taken by serial implementation : 268037 nanoseconds
+parameters used n = 32768
+parameters used thread_count = 2048
+Time taken by parallel implementation : 59410590 nanoseconds
+Time taken by serial implementation : 257669 nanoseconds
+parameters used n = 32768
+parameters used thread_count = 4096
+Time taken by parallel implementation : 125971589 nanoseconds
+Time taken by serial implementation : 290990 nanoseconds
+parameters used n = 262144
+parameters used thread_count = 2
+Time taken by parallel implementation : 935104 nanoseconds
+Time taken by serial implementation : 2553923 nanoseconds
+parameters used n = 262144
+parameters used thread_count = 4
+Time taken by parallel implementation : 7287137 nanoseconds
+Time taken by serial implementation : 2097980 nanoseconds
+parameters used n = 262144
+parameters used thread_count = 8
+Time taken by parallel implementation : 1455957 nanoseconds
+Time taken by serial implementation : 1969197 nanoseconds
+parameters used n = 262144
+parameters used thread_count = 16
+Time taken by parallel implementation : 1398951 nanoseconds
+Time taken by serial implementation : 1829841 nanoseconds
+parameters used n = 262144
+parameters used thread_count = 32
+Time taken by parallel implementation : 2462105 nanoseconds
+Time taken by serial implementation : 2116266 nanoseconds
+parameters used n = 262144
+parameters used thread_count = 64
+Time taken by parallel implementation : 3304691 nanoseconds
+Time taken by serial implementation : 2108958 nanoseconds
+parameters used n = 262144
+parameters used thread_count = 128
+Time taken by parallel implementation : 6986183 nanoseconds
+Time taken by serial implementation : 1858391 nanoseconds
+parameters used n = 262144
+parameters used thread_count = 256
+Time taken by parallel implementation : 8190213 nanoseconds
+Time taken by serial implementation : 2566270 nanoseconds
+parameters used n = 262144
+parameters used thread_count = 512
+Time taken by parallel implementation : 19888836 nanoseconds
+Time taken by serial implementation : 2466961 nanoseconds
+parameters used n = 262144
+parameters used thread_count = 1024
+Time taken by parallel implementation : 32946686 nanoseconds
+Time taken by serial implementation : 2028185 nanoseconds
+parameters used n = 262144
+parameters used thread_count = 2048
+Time taken by parallel implementation : 65237121 nanoseconds
+Time taken by serial implementation : 2182778 nanoseconds
+parameters used n = 262144
+parameters used thread_count = 4096
+Time taken by parallel implementation : 116245910 nanoseconds
+Time taken by serial implementation : 1952881 nanoseconds
+parameters used n = 2097152
+parameters used thread_count = 2
+Time taken by parallel implementation : 8079631 nanoseconds
+Time taken by serial implementation : 17254487 nanoseconds
+parameters used n = 2097152
+parameters used thread_count = 4
+Time taken by parallel implementation : 6926839 nanoseconds
+Time taken by serial implementation : 15348548 nanoseconds
+parameters used n = 2097152
+parameters used thread_count = 8
+Time taken by parallel implementation : 7467369 nanoseconds
+Time taken by serial implementation : 14123971 nanoseconds
+parameters used n = 2097152
+parameters used thread_count = 16
+Time taken by parallel implementation : 7664388 nanoseconds
+Time taken by serial implementation : 15941504 nanoseconds
+parameters used n = 2097152
+parameters used thread_count = 32
+Time taken by parallel implementation : 10509406 nanoseconds
+Time taken by serial implementation : 15428970 nanoseconds
+parameters used n = 2097152
+parameters used thread_count = 64
+Time taken by parallel implementation : 8421209 nanoseconds
+Time taken by serial implementation : 16810303 nanoseconds
+parameters used n = 2097152
+parameters used thread_count = 128
+Time taken by parallel implementation : 11795893 nanoseconds
+Time taken by serial implementation : 15004776 nanoseconds
+parameters used n = 2097152
+parameters used thread_count = 256
+Time taken by parallel implementation : 14932375 nanoseconds
+Time taken by serial implementation : 15454852 nanoseconds
+parameters used n = 2097152
+parameters used thread_count = 512
+Time taken by parallel implementation : 20186010 nanoseconds
+Time taken by serial implementation : 14235058 nanoseconds
+parameters used n = 2097152
+parameters used thread_count = 1024
+Time taken by parallel implementation : 36247627 nanoseconds
+Time taken by serial implementation : 14165206 nanoseconds
+parameters used n = 2097152
+parameters used thread_count = 2048
+Time taken by parallel implementation : 66617215 nanoseconds
+Time taken by serial implementation : 14878833 nanoseconds
+parameters used n = 2097152
+parameters used thread_count = 4096
+Time taken by parallel implementation : 120268957 nanoseconds
+Time taken by serial implementation : 15128929 nanoseconds
+parameters used n = 16777216
+parameters used thread_count = 2
+Time taken by parallel implementation : 60564905 nanoseconds
+Time taken by serial implementation : 113113609 nanoseconds
+parameters used n = 16777216
+parameters used thread_count = 4
+Time taken by parallel implementation : 55585884 nanoseconds
+Time taken by serial implementation : 114013003 nanoseconds
+parameters used n = 16777216
+parameters used thread_count = 8
+Time taken by parallel implementation : 57851305 nanoseconds
+Time taken by serial implementation : 115006281 nanoseconds
+parameters used n = 16777216
+parameters used thread_count = 16
+Time taken by parallel implementation : 59030982 nanoseconds
+Time taken by serial implementation : 114458535 nanoseconds
+parameters used n = 16777216
+parameters used thread_count = 32
+Time taken by parallel implementation : 56684832 nanoseconds
+Time taken by serial implementation : 115310205 nanoseconds
+parameters used n = 16777216
+parameters used thread_count = 64
+Time taken by parallel implementation : 56681911 nanoseconds
+Time taken by serial implementation : 113362211 nanoseconds
+parameters used n = 16777216
+parameters used thread_count = 128
+Time taken by parallel implementation : 57679133 nanoseconds
+Time taken by serial implementation : 114678790 nanoseconds
+parameters used n = 16777216
+parameters used thread_count = 256
+Time taken by parallel implementation : 60241953 nanoseconds
+Time taken by serial implementation : 115301320 nanoseconds
+parameters used n = 16777216
+parameters used thread_count = 512
+Time taken by parallel implementation : 67717477 nanoseconds
+Time taken by serial implementation : 114719506 nanoseconds
+parameters used n = 16777216
+parameters used thread_count = 1024
+Time taken by parallel implementation : 81021142 nanoseconds
+Time taken by serial implementation : 114434749 nanoseconds
+parameters used n = 16777216
+parameters used thread_count = 2048
+Time taken by parallel implementation : 112439754 nanoseconds
+Time taken by serial implementation : 114366300 nanoseconds
+parameters used n = 16777216
+parameters used thread_count = 4096
+Time taken by parallel implementation : 169800382 nanoseconds
+Time taken by serial implementation : 114383522 nanoseconds
+parameters used n = 134217728
+parameters used thread_count = 2
+Time taken by parallel implementation : 485566022 nanoseconds
+Time taken by serial implementation : 907150916 nanoseconds
+parameters used n = 134217728
+parameters used thread_count = 4
+Time taken by parallel implementation : 414868320 nanoseconds
+Time taken by serial implementation : 900313253 nanoseconds
+parameters used n = 134217728
+parameters used thread_count = 8
+Time taken by parallel implementation : 424986511 nanoseconds
+Time taken by serial implementation : 898800312 nanoseconds
+parameters used n = 134217728
+parameters used thread_count = 16
+Time taken by parallel implementation : 428931145 nanoseconds
+Time taken by serial implementation : 910459901 nanoseconds
+parameters used n = 134217728
+parameters used thread_count = 32
+Time taken by parallel implementation : 437618921 nanoseconds
+Time taken by serial implementation : 906926439 nanoseconds
+parameters used n = 134217728
+parameters used thread_count = 64
+Time taken by parallel implementation : 439540775 nanoseconds
+Time taken by serial implementation : 900168426 nanoseconds
+parameters used n = 134217728
+parameters used thread_count = 128
+Time taken by parallel implementation : 439316384 nanoseconds
+Time taken by serial implementation : 905931345 nanoseconds
+parameters used n = 134217728
+parameters used thread_count = 256
+Time taken by parallel implementation : 445406321 nanoseconds
+Time taken by serial implementation : 912042809 nanoseconds
+parameters used n = 134217728
+parameters used thread_count = 512
+Time taken by parallel implementation : 449146645 nanoseconds
+Time taken by serial implementation : 910576683 nanoseconds
+parameters used n = 134217728
+parameters used thread_count = 1024
+Time taken by parallel implementation : 459448765 nanoseconds
+Time taken by serial implementation : 911360682 nanoseconds
+parameters used n = 134217728
+parameters used thread_count = 2048
+Time taken by parallel implementation : 490598304 nanoseconds
+Time taken by serial implementation : 903174960 nanoseconds
+parameters used n = 134217728
+parameters used thread_count = 4096
+Time taken by parallel implementation : 536128273 nanoseconds
+Time taken by serial implementation : 910183460 nanoseconds
+parameters used n = 1073741824
+parameters used thread_count = 2
+Time taken by parallel implementation : 3676749686 nanoseconds
+Time taken by serial implementation : 7248116628 nanoseconds
+parameters used n = 1073741824
+parameters used thread_count = 4
+Time taken by parallel implementation : 3322322881 nanoseconds
+Time taken by serial implementation : 7205751942 nanoseconds
+parameters used n = 1073741824
+parameters used thread_count = 8
+Time taken by parallel implementation : 3396017523 nanoseconds
+Time taken by serial implementation : 7275755440 nanoseconds
+parameters used n = 1073741824
+parameters used thread_count = 16
+Time taken by parallel implementation : 3439465220 nanoseconds
+Time taken by serial implementation : 7279926317 nanoseconds
+parameters used n = 1073741824
+parameters used thread_count = 32
+Time taken by parallel implementation : 3511407726 nanoseconds
+Time taken by serial implementation : 7649107176 nanoseconds
+parameters used n = 1073741824
+parameters used thread_count = 64
+Time taken by parallel implementation : 3583336307 nanoseconds
+Time taken by serial implementation : 7259863845 nanoseconds
+parameters used n = 1073741824
+parameters used thread_count = 128
+Time taken by parallel implementation : 3483751851 nanoseconds
+Time taken by serial implementation : 7305415950 nanoseconds
+parameters used n = 1073741824
+parameters used thread_count = 256
+Time taken by parallel implementation : 3531104506 nanoseconds
+Time taken by serial implementation : 7235956541 nanoseconds
+parameters used n = 1073741824
+parameters used thread_count = 512
+Time taken by parallel implementation : 3483922327 nanoseconds
+Time taken by serial implementation : 7188590366 nanoseconds
+parameters used n = 1073741824
+parameters used thread_count = 1024
+Time taken by parallel implementation : 3497511135 nanoseconds
+Time taken by serial implementation : 7212778511 nanoseconds
+parameters used n = 1073741824
+parameters used thread_count = 2048
+Time taken by parallel implementation : 3527385751 nanoseconds
+Time taken by serial implementation : 7286352382 nanoseconds
+parameters used n = 1073741824
+parameters used thread_count = 4096
+Time taken by parallel implementation : 3574011986 nanoseconds
+Time taken by serial implementation : 7201846571 nanoseconds
