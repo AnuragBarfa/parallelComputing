@@ -5,13 +5,13 @@
 using namespace std;
 using namespace std::chrono;
 double func(double x){
-	return x*x;
+	return 4/(1+x*x);
 }
 double funcIntegration(double x){
 	return x*x*x/3;
 }
 double actualAnswer(double a, double b){
-	return funcIntegration(b)-funcIntegration(a);
+	return 3.14159265358979323846 ;
 }
 double routine(double x, double dx, int n){
 	double local_ans=0;
@@ -38,10 +38,11 @@ double simpleTrap(double a,double b,int n){
 }
 int main(int argc ,char** argv){
 	freopen("output2.txt","a",stdout);
+	cout << std::setprecision(20);
 	double a,b;
 	int n;// n must be divisible by thread_count
 	int thread_count;
-	a=1;b=50;//n=400;thread_count=8;
+	a=0;b=1;//n=400;thread_count=8;
 	// scanf("%d",&n);
 	// scanf("%d",&thread_count);
 	n=stoi(argv[1]);
@@ -65,8 +66,8 @@ int main(int argc ,char** argv){
 	duration = duration_cast<nanoseconds>(stop - start); 
   	cout << "Time taken by serial implementation : "<< duration.count() << " nanoseconds" << endl; 
   	
-  	printf("Actual Answer : %f\n", actualAnswer(a,b));
-  	printf("Answer found by parallel implementation : %f\n",final_ans);
-  	printf("Answer found by simple implementation : %f\n",final_ans2);
+  	// cout<<"Actual Answer : "<< actualAnswer(a,b)<<endl;
+  	// cout<<"Answer found by parallel implementation : "<<final_ans<<endl;
+  	// cout<<"Answer found by simple implementation : "<<final_ans2<<endl;
 	return 0;
 }
