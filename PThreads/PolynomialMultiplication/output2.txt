@@ -1,0 +1,36 @@
+parameters used polynomial size = 1
+Time taken by naive implementation : 149605 nanoseconds
+Time taken by parallel implementation : 145400 nanoseconds
+parameters used polynomial size = 2
+Time taken by naive implementation : 313674 nanoseconds
+Time taken by parallel implementation : 200112 nanoseconds
+parameters used polynomial size = 4
+Time taken by naive implementation : 694547 nanoseconds
+Time taken by parallel implementation : 881529 nanoseconds
+parameters used polynomial size = 8
+Time taken by naive implementation : 2924566 nanoseconds
+Time taken by parallel implementation : 2432073 nanoseconds
+parameters used polynomial size = 16
+Time taken by naive implementation : 1820578 nanoseconds
+Time taken by parallel implementation : 2074907 nanoseconds
+parameters used polynomial size = 32
+Time taken by naive implementation : 3610508 nanoseconds
+Time taken by parallel implementation : 3486651 nanoseconds
+parameters used polynomial size = 64
+Time taken by naive implementation : 5581244 nanoseconds
+Time taken by parallel implementation : 5522204 nanoseconds
+parameters used polynomial size = 128
+Time taken by naive implementation : 10780785 nanoseconds
+Time taken by parallel implementation : 18822102 nanoseconds
+parameters used polynomial size = 256
+Time taken by naive implementation : 21823756 nanoseconds
+Time taken by parallel implementation : 57605419 nanoseconds
+parameters used polynomial size = 512
+Time taken by naive implementation : 51962786 nanoseconds
+Time taken by parallel implementation : 186312017 nanoseconds
+parameters used polynomial size = 1024
+Time taken by naive implementation : 79958467 nanoseconds
+Time taken by parallel implementation : 582836959 nanoseconds
+parameters used polynomial size = 2048
+Time taken by naive implementation : 177598960 nanoseconds
+Time taken by parallel implementation : 1858875013 nanoseconds
