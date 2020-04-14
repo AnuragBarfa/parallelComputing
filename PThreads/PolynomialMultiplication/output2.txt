@@ -34,3 +34,6 @@ Time taken by parallel implementation : 582836959 nanoseconds
 parameters used polynomial size = 2048
 Time taken by naive implementation : 177598960 nanoseconds
 Time taken by parallel implementation : 1858875013 nanoseconds
+parameters used polynomial size = 4
+Time taken by naive implementation : 985421 nanoseconds
+Time taken by parallel implementation : 1056088 nanoseconds

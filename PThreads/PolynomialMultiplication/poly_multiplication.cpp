@@ -191,8 +191,11 @@ int main(int argc ,char** argv){
 	// scanf("%d",&n2);
 	int *poly1=new int[n1];
 	int *poly2=new int[n2];
-	randomArray(poly1,0,n1);
-	randomArray(poly2,0,n2);
+
+	poly1[0]=1;poly1[1]=2;poly1[2]=3;poly1[3]=4;
+	poly2[0]=2;poly2[1]=1;poly2[2]=3;poly2[3]=1;
+	// randomArray(poly1,0,n1);
+	// randomArray(poly2,0,n2);
 	printf("parameters used polynomial size = %d\n", n1);
 	// printArray(poly1,0,n1);
 	// printArray(poly2,0,n2);
