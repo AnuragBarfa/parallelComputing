@@ -77,14 +77,24 @@ void *runner(void *param){
 	recursive_FFT(d->poly,d->size,d->w);
 	pthread_exit(0);
 }
-int main(){
+void randomArray(complexData* arr,int l,int h){
+	for(int i=l;i<h;i++){
+		arr[i].set(rand()%10,rand()%10);
+	}
+}
+int main(int argc ,char** argv){
+	freopen("output3.txt","a",stdout);
+	cout << std::setprecision(20);
 	int n1,n2;
-	n1=n2=4;
+	n1=n2=stoi(argv[1]);
 	complexData poly1[n1];
 	complexData poly2[n2];
-	poly1[0].set(1,0);poly1[1].set(2,0);poly1[2].set(3,0);poly1[3].set(4,0);
-	poly2[0].set(2,0);poly2[1].set(1,0);poly2[2].set(3,0);poly2[3].set(1,0);
+	randomArray(poly1,0,n1);
+	randomArray(poly2,0,n2);
+	// poly1[0].set(1,0);poly1[1].set(2,0);poly1[2].set(3,0);poly1[3].set(4,0);
+	// poly2[0].set(2,0);poly2[1].set(1,0);poly2[2].set(3,0);poly2[3].set(1,0);
 	int n3=n1+n2;
+	printf("parameters used polynomial size = %d\n", n1);
 	complexData updated_poly1[n3];
 	complexData updated_poly2[n3];
 	for(int i=0;i<n1;i++)updated_poly1[i]=poly1[i];
@@ -95,6 +105,11 @@ int main(){
 	d0.poly=updated_poly1;d0.size=n3;d0.w=w;
 	d1.poly=updated_poly2;d1.size=n3;d1.w=w;
 	// printArray(updated_poly1,0,n3);
+	
+	auto start = high_resolution_clock::now(); 
+	auto stop = high_resolution_clock::now();
+	auto duration = duration_cast<nanoseconds>(stop - start); 
+	start = high_resolution_clock::now();
 	pthread_create(&threads[0],NULL,runner,(void*)&d0);// recursive_FFT(updated_poly1,n3,w);
 	// printArray(updated_poly1,0,n3);
 	// printArray(updated_poly2,0,n3);
@@ -110,6 +125,9 @@ int main(){
 	pthread_create(&threads[2],NULL,runner,(void*)&d2);// recursive_FFT(poly_mul_value,n3,w1);
 	pthread_join(threads[2],NULL);
 	for(int i=0;i<n3;i++)poly_mul_value[i].set(poly_mul_value[i].x/(n3),poly_mul_value[i].y/(n3));
-	printArray(poly_mul_value,0,n3);
+	stop = high_resolution_clock::now(); 
+	duration = duration_cast<nanoseconds>(stop - start); 
+  	cout << "Time taken by fastFourier implementation : "<< duration.count() << " nanoseconds" << endl; 
+	// printArray(poly_mul_value,0,n3);
 	return 0;
 }

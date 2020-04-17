@@ -1,0 +1,24 @@
+parameters used polynomial size = 1
+Time taken by fastFourier implementation : 2258076 nanoseconds
+parameters used polynomial size = 2
+Time taken by fastFourier implementation : 5200345 nanoseconds
+parameters used polynomial size = 4
+Time taken by fastFourier implementation : 2288493 nanoseconds
+parameters used polynomial size = 8
+Time taken by fastFourier implementation : 8008683 nanoseconds
+parameters used polynomial size = 16
+Time taken by fastFourier implementation : 10078987 nanoseconds
+parameters used polynomial size = 32
+Time taken by fastFourier implementation : 18784927 nanoseconds
+parameters used polynomial size = 64
+Time taken by fastFourier implementation : 35255592 nanoseconds
+parameters used polynomial size = 128
+Time taken by fastFourier implementation : 75357960 nanoseconds
+parameters used polynomial size = 256
+Time taken by fastFourier implementation : 161294762 nanoseconds
+parameters used polynomial size = 512
+Time taken by fastFourier implementation : 282651952 nanoseconds
+parameters used polynomial size = 1024
+Time taken by fastFourier implementation : 553516956 nanoseconds
+parameters used polynomial size = 2048
+Time taken by fastFourier implementation : 1077316683 nanoseconds

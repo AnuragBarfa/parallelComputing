@@ -1,6 +1,6 @@
 import os
 
-files=[['poly_multiplication.cpp','output2.txt']]
+files=[['fast_fourier.cpp','output3.txt']]
 
 # for file in files:
 # 	try:
