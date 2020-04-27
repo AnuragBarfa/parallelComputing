@@ -17,13 +17,13 @@ void printArray(int *myQueue,int l, int h){
 void* producer(void* data){
   printf("prod\n");
   while(true){
-    printf("in whi\n");
+    // printf("in whi\n");
     pthread_mutex_lock(&queue_mutex);
     if(myQueue[tail]==0){
       myQueue[tail]=rand()%10+1;
       tail=(tail+1)%N;
     }
-    else sleep(3);
+    else sleep(1);
     // printArray(myQueue,0,N);
     pthread_mutex_unlock(&queue_mutex);
   }
@@ -36,7 +36,7 @@ void* consumer(void* data){
       int x=myQueue[head];
       myQueue[head]=0;
       head=(head+1)%N;
-      // printArray(myQueue,0,N);
+      printArray(myQueue,0,N);
       pthread_mutex_unlock(&queue_mutex);
       sleep(x);
     }
@@ -55,11 +55,14 @@ int main(){
   for(int i=0;i<c;i++){
     pthread_create(&consumer_threads[i],NULL,consumer,NULL);
   }  
-  for(int i=0;i<p;i++){
-    pthread_join(producer_threads[i],NULL);
-  }
-  for(int i=0;i<c;i++){
-    pthread_join(consumer_threads[i],NULL);
-  }
+  // for(int i=0;i<p;i++){
+  //   pthread_join(producer_threads[i],NULL);
+  // }
+  // for(int i=0;i<c;i++){
+  //   pthread_join(consumer_threads[i],NULL);
+  // }
+  sleep(40);
+   /* Exit the program */
+  exit(0);
   return 0;
 }

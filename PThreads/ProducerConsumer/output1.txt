@@ -1,0 +1,16 @@
+Parameters used N = 8 p = 16 c = 1
+Throughput of system = 9.9996877445107656968e-10
+Parameters used N = 8 p = 16 c = 2
+Throughput of system = 9.9996799729495933207e-10
+Parameters used N = 8 p = 16 c = 4
+Throughput of system = 9.9997554681152678313e-10
+Parameters used N = 8 p = 16 c = 8
+Throughput of system = 9.9997754521297110841e-10
+Parameters used N = 8 p = 16 c = 16
+Throughput of system = 9.8910812873498343833e-10
+Parameters used N = 8 p = 16 c = 32
+Throughput of system = 1.088382939329335386e-09
+Parameters used N = 8 p = 16 c = 64
+Throughput of system = 1.0119293181176658436e-09
+Parameters used N = 8 p = 16 c = 128
+Throughput of system = 9.864333794240565112e-10
