@@ -1,0 +1,6 @@
+parameters used n = 256 and no of threads = 4
+Time taken : 0.000182688 seconds
+parameters used n = 256 and no of threads = 16
+Time taken : 0.00158597 seconds
+parameters used n = 256 and no of threads = 64
+Time taken : 0.00739334 seconds

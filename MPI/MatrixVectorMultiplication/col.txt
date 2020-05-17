@@ -1,0 +1,126 @@
+parameters used n = 16 and no of threads = 16
+Time taken : 0.000989139 seconds
+parameters used n = 32 and no of threads = 16
+Time taken : 0.00159951 seconds
+parameters used n = 48 and no of threads = 16
+Time taken : 0.00208435 seconds
+parameters used n = 64 and no of threads = 16
+Time taken : 0.00124281 seconds
+parameters used n = 80 and no of threads = 16
+Time taken : 0.00148085 seconds
+parameters used n = 96 and no of threads = 16
+Time taken : 0.00100041 seconds
+parameters used n = 112 and no of threads = 16
+Time taken : 0.00169951 seconds
+parameters used n = 128 and no of threads = 16
+Time taken : 0.00129065 seconds
+parameters used n = 144 and no of threads = 16
+Time taken : 0.00113158 seconds
+parameters used n = 160 and no of threads = 16
+Time taken : 0.00160585 seconds
+parameters used n = 176 and no of threads = 16
+Time taken : 0.00135595 seconds
+parameters used n = 192 and no of threads = 16
+Time taken : 0.00183047 seconds
+parameters used n = 208 and no of threads = 16
+Time taken : 0.00201775 seconds
+parameters used n = 224 and no of threads = 16
+Time taken : 0.0011982 seconds
+parameters used n = 240 and no of threads = 16
+Time taken : 0.00203013 seconds
+parameters used n = 256 and no of threads = 16
+Time taken : 0.00515339 seconds
+parameters used n = 272 and no of threads = 16
+Time taken : 0.0021793 seconds
+parameters used n = 288 and no of threads = 16
+Time taken : 0.00251738 seconds
+parameters used n = 304 and no of threads = 16
+Time taken : 0.00222183 seconds
+parameters used n = 320 and no of threads = 16
+Time taken : 0.00283449 seconds
+parameters used n = 336 and no of threads = 16
+Time taken : 0.00167926 seconds
+parameters used n = 352 and no of threads = 16
+Time taken : 0.00236475 seconds
+parameters used n = 368 and no of threads = 16
+Time taken : 0.00207469 seconds
+parameters used n = 384 and no of threads = 16
+Time taken : 0.00301651 seconds
+parameters used n = 400 and no of threads = 16
+Time taken : 0.00834829 seconds
+parameters used n = 416 and no of threads = 16
+Time taken : 0.00391452 seconds
+parameters used n = 432 and no of threads = 16
+Time taken : 0.00450701 seconds
+parameters used n = 448 and no of threads = 16
+Time taken : 0.00368067 seconds
+parameters used n = 464 and no of threads = 16
+Time taken : 0.00688807 seconds
+parameters used n = 480 and no of threads = 16
+Time taken : 0.00533916 seconds
+parameters used n = 496 and no of threads = 16
+Time taken : 0.00405939 seconds
+parameters used n = 512 and no of threads = 16
+Time taken : 0.00349689 seconds
+parameters used n = 528 and no of threads = 16
+Time taken : 0.00393787 seconds
+parameters used n = 544 and no of threads = 16
+Time taken : 0.00539605 seconds
+parameters used n = 560 and no of threads = 16
+Time taken : 0.00679605 seconds
+parameters used n = 576 and no of threads = 16
+Time taken : 0.00242811 seconds
+parameters used n = 592 and no of threads = 16
+Time taken : 0.00370481 seconds
+parameters used n = 608 and no of threads = 16
+Time taken : 0.00553685 seconds
+parameters used n = 624 and no of threads = 16
+Time taken : 0.0115961 seconds
+parameters used n = 640 and no of threads = 16
+Time taken : 0.00523304 seconds
+parameters used n = 656 and no of threads = 16
+Time taken : 0.00801212 seconds
+parameters used n = 672 and no of threads = 16
+Time taken : 0.00886395 seconds
+parameters used n = 688 and no of threads = 16
+Time taken : 0.00487289 seconds
+parameters used n = 704 and no of threads = 16
+Time taken : 0.00594548 seconds
+parameters used n = 720 and no of threads = 16
+Time taken : 0.00676718 seconds
+parameters used n = 736 and no of threads = 16
+Time taken : 0.0078997 seconds
+parameters used n = 752 and no of threads = 16
+Time taken : 0.0079037 seconds
+parameters used n = 768 and no of threads = 16
+Time taken : 0.00351564 seconds
+parameters used n = 784 and no of threads = 16
+Time taken : 0.00788137 seconds
+parameters used n = 800 and no of threads = 16
+Time taken : 0.00887931 seconds
+parameters used n = 816 and no of threads = 16
+Time taken : 0.00981536 seconds
+parameters used n = 832 and no of threads = 16
+Time taken : 0.00863573 seconds
+parameters used n = 848 and no of threads = 16
+Time taken : 0.00457336 seconds
+parameters used n = 864 and no of threads = 16
+Time taken : 0.00934039 seconds
+parameters used n = 880 and no of threads = 16
+Time taken : 0.00921177 seconds
+parameters used n = 896 and no of threads = 16
+Time taken : 0.0131951 seconds
+parameters used n = 912 and no of threads = 16
+Time taken : 0.00429493 seconds
+parameters used n = 928 and no of threads = 16
+Time taken : 0.0107877 seconds
+parameters used n = 944 and no of threads = 16
+Time taken : 0.0164813 seconds
+parameters used n = 960 and no of threads = 16
+Time taken : 0.00854926 seconds
+parameters used n = 976 and no of threads = 16
+Time taken : 0.00410344 seconds
+parameters used n = 992 and no of threads = 16
+Time taken : 0.011898 seconds
+parameters used n = 1008 and no of threads = 16
+Time taken : 0.0156915 seconds
