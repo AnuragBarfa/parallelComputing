@@ -1,6 +1,6 @@
 import os
 
-files=[['dfa.cpp','output2.txt']]
+files=[['dfa.cpp','output1.txt']]
 
 # for file in files:
 # 	try:
@@ -24,6 +24,6 @@ for file in files:
 	 	pass
 	os.system('g++ -pthread '+file[0])
 	n=2
-	while n<=10000:
-		os.system('./a.out '+str(262144)+' '+str(n))
+	while n<=1000000:
+		os.system('./a.out '+str(n)+' '+str(20))
 		n=n*2

@@ -1,51 +1,57 @@
-parameters used word size = 20 and no of threads = 20
-Time taken by sequencial implementation : 154664 nanoseconds
-Time taken by parallel implementation : 821363 nanoseconds
-parameters used word size = 40 and no of threads = 20
-Time taken by sequencial implementation : 213922 nanoseconds
-Time taken by parallel implementation : 658146 nanoseconds
-parameters used word size = 80 and no of threads = 20
-Time taken by sequencial implementation : 1351890 nanoseconds
-Time taken by parallel implementation : 880117 nanoseconds
-parameters used word size = 160 and no of threads = 20
-Time taken by sequencial implementation : 235264 nanoseconds
-Time taken by parallel implementation : 1905584 nanoseconds
-parameters used word size = 320 and no of threads = 20
-Time taken by sequencial implementation : 223452 nanoseconds
-Time taken by parallel implementation : 841432 nanoseconds
-parameters used word size = 640 and no of threads = 20
-Time taken by sequencial implementation : 156303 nanoseconds
-Time taken by parallel implementation : 822081 nanoseconds
-parameters used word size = 1280 and no of threads = 20
-Time taken by sequencial implementation : 222339 nanoseconds
-Time taken by parallel implementation : 1108278 nanoseconds
-parameters used word size = 2560 and no of threads = 20
-Time taken by sequencial implementation : 253782 nanoseconds
-Time taken by parallel implementation : 1185054 nanoseconds
-parameters used word size = 5120 and no of threads = 20
-Time taken by sequencial implementation : 329479 nanoseconds
-Time taken by parallel implementation : 1153757 nanoseconds
-parameters used word size = 10240 and no of threads = 20
-Time taken by sequencial implementation : 407897 nanoseconds
-Time taken by parallel implementation : 1472261 nanoseconds
-parameters used word size = 20480 and no of threads = 20
-Time taken by sequencial implementation : 827229 nanoseconds
-Time taken by parallel implementation : 1426387 nanoseconds
-parameters used word size = 40960 and no of threads = 20
-Time taken by sequencial implementation : 1366340 nanoseconds
-Time taken by parallel implementation : 1223099 nanoseconds
-parameters used word size = 81920 and no of threads = 20
-Time taken by sequencial implementation : 1659299 nanoseconds
-Time taken by parallel implementation : 719332 nanoseconds
-parameters used word size = 163840 and no of threads = 20
-Time taken by sequencial implementation : 3302529 nanoseconds
-Time taken by parallel implementation : 698303 nanoseconds
-parameters used word size = 327680 and no of threads = 20
-Time taken by sequencial implementation : 5799783 nanoseconds
-Time taken by parallel implementation : 781966 nanoseconds
-parameters used word size = 655360 and no of threads = 20
-Time taken by sequencial implementation : 11216866 nanoseconds
-Time taken by parallel implementation : 1053099 nanoseconds
-parameters used word size = 1310720 and no of threads = 20
-Time taken by sequencial implementation : 22622661 nanoseconds
-Time taken by parallel implementation : 2112059 nanoseconds
+parameters used word size = 2 and no of threads = 20
+Time taken by sequencial implementation : 185523 nanoseconds
+Time taken by parallel implementation : 1353082 nanoseconds
+parameters used word size = 4 and no of threads = 20
+Time taken by sequencial implementation : 355707 nanoseconds
+Time taken by parallel implementation : 1394157 nanoseconds
+parameters used word size = 8 and no of threads = 20
+Time taken by sequencial implementation : 178241 nanoseconds
+Time taken by parallel implementation : 1258334 nanoseconds
+parameters used word size = 16 and no of threads = 20
+Time taken by sequencial implementation : 175636 nanoseconds
+Time taken by parallel implementation : 872655 nanoseconds
+parameters used word size = 32 and no of threads = 20
+Time taken by sequencial implementation : 292698 nanoseconds
+Time taken by parallel implementation : 1245491 nanoseconds
+parameters used word size = 64 and no of threads = 20
+Time taken by sequencial implementation : 175943 nanoseconds
+Time taken by parallel implementation : 956788 nanoseconds
+parameters used word size = 128 and no of threads = 20
+Time taken by sequencial implementation : 161568 nanoseconds
+Time taken by parallel implementation : 1200440 nanoseconds
+parameters used word size = 256 and no of threads = 20
+Time taken by sequencial implementation : 2115680 nanoseconds
+Time taken by parallel implementation : 1251231 nanoseconds
+parameters used word size = 512 and no of threads = 20
+Time taken by sequencial implementation : 1184819 nanoseconds
+Time taken by parallel implementation : 247662 nanoseconds
+parameters used word size = 1024 and no of threads = 20
+Time taken by sequencial implementation : 1249898 nanoseconds
+Time taken by parallel implementation : 220913 nanoseconds
+parameters used word size = 2048 and no of threads = 20
+Time taken by sequencial implementation : 1617663 nanoseconds
+Time taken by parallel implementation : 338322 nanoseconds
+parameters used word size = 4096 and no of threads = 20
+Time taken by sequencial implementation : 1700881 nanoseconds
+Time taken by parallel implementation : 350085 nanoseconds
+parameters used word size = 8192 and no of threads = 20
+Time taken by sequencial implementation : 1839490 nanoseconds
+Time taken by parallel implementation : 492687 nanoseconds
+parameters used word size = 16384 and no of threads = 20
+Time taken by sequencial implementation : 1352383 nanoseconds
+Time taken by parallel implementation : 457628 nanoseconds
+parameters used word size = 32768 and no of threads = 20
+Time taken by sequencial implementation : 2325851 nanoseconds
+Time taken by parallel implementation : 839806 nanoseconds
+parameters used word size = 65536 and no of threads = 20
+Time taken by sequencial implementation : 3878006 nanoseconds
+Time taken by parallel implementation : 2079227 nanoseconds
+parameters used word size = 131072 and no of threads = 20
+Time taken by sequencial implementation : 7876203 nanoseconds
+Time taken by parallel implementation : 3192556 nanoseconds
+parameters used word size = 262144 and no of threads = 20
+Time taken by sequencial implementation : 9829855 nanoseconds
+Time taken by parallel implementation : 4599040 nanoseconds
+parameters used word size = 524288 and no of threads = 20
+Time taken by sequencial implementation : 14344445 nanoseconds
+Time taken by parallel implementation : 12731231 nanoseconds

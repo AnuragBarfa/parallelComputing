@@ -71,7 +71,6 @@ void *parallelRunner(void *param){
     pthread_create(&threads[i],NULL,serialRunner,(void*)&ds[i]);    
   }
   for(int i=0;i<d->threads;i++){
-    if(i==0)
     pthread_join(threads[i],NULL);
   }
   int ans=d->initialStates[0];
@@ -93,7 +92,7 @@ void printArray(char* input, int l,int h){
   cout<<"\n";
 }
 int main(int argc ,char** argv){
-  freopen("output2.txt","a",stdout);
+  freopen("output1.txt","a",stdout);
   srand(time(0));
   int initialStates[1];initialStates[0]=0;
   int n=stoi(argv[1]);
